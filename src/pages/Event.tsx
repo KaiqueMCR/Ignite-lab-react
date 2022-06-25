@@ -4,6 +4,8 @@ import { Header } from "../components/Header";
 import { Sidebar } from "../components/Sidebar";
 import { Video } from "../components/Video";
 
+import ignite_lab from "/src/assets/ignite-lab.png"
+
 export function Event(): JSX.Element {
   const { slug } = useParams<{ slug: string }>()
 
@@ -21,7 +23,7 @@ export function Event(): JSX.Element {
                   <div className="h-full w-full max-w-[1100px] max-h-[100vh] aspect-video flex flex-col justify-center items-center">
                     <h1 className="text-3xl font-bold">Bem-Vindo ao Ignite Lab!</h1>
 
-                    <img src="/src/assets/ignite-lab.png" alt="" className="w-[600px]" />
+                    <img src={ignite_lab} alt="" className="w-[600px]" />
 
                     <Link to="/event/lesson/abertura-do-evento-ignite-lab" className="flex gap-4 justify-center items-center hover:text-green-300 transition-colors">
                       <p className="text-xl">Selecione uma aula para começar sua jornada</p>
